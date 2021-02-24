@@ -13,27 +13,21 @@ public class GameControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Keys.text = "Fundet nøgle: Ingen";
+        print("Start: ingen nøgler");
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (KeyRedfound = true)
-        {
-            Keys.text = "Fundet nøgle: Rød";
-            print("Rød nøgle fundet");
-        }
-        else
-        {
-            Keys.text = "Fundet nøgle: Ingen";
-            print("ingen nøgler");
-        }
+        
     }
 
     public void AddRedkey()
     {
         print("Rød nøgle fundet");
         KeyRedfound = true;
+        Keys.text = "Fundet nøgle: Rød";
     }
 }
