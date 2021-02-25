@@ -18,6 +18,12 @@ public class KeyProjector : MonoBehaviour
     }
     public void CheckLockMatch()
     {
-        //if (Physics.Raycast(transform.position, transform.forward, ))
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.forward, out hit))
+        {
+            if (hit.transform.tag == "LockCube") {
+                Debug.Log(hit.distance);
+            }
+        }
     }
 }
